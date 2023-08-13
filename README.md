@@ -7,7 +7,7 @@ Link to App: [Mingo](https://)
 ###### Created by Joshua Hsu, Harkirat Singh, and Lily Smith 
 
 Joshua Hsu: [GitHub](https://github.com/jhsu79) |  [LinkedIn](https://www.linkedin.com/in/joshuanhsu) | 
-Harkirat Singh:  [GitHub](https://) |  [LinkedIn](https://www.linkedin.com/in/harkirat-singh-hanzra/) |  
+Harkirat Singh:  [GitHub](https://github.com/harkirats043) |  [LinkedIn](https://www.linkedin.com/in/harkirat-singh-hanzra/) |  
 Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.linkedin.com/in/lilliana-r-smith/) | 
 
 
