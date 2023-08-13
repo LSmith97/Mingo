@@ -14,6 +14,8 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 ## Screenshot(s)
 
 
+
+
 ## Getting Started 
 1. Click on this [link](https://) to access the Mingo app.  
 2. Once the page is loaded, you should be able to view all the posts that have been created. 
@@ -45,4 +47,5 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 3. Edit and update posts and comments 
 4. View all posts and comments that a user has made. 
 5. Create multi-layer comments on comments. 
+
 ## Licenses 
