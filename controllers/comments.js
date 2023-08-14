@@ -27,7 +27,16 @@ async function create(req, res) {
 }
 
 async function remove(req, res) {
-    await Comment.deleteOne({ _id: req.params.commentId })
+
+    const deletedComment = await Comment.findById(req.params.commentId);
+    await Comment.deleteOne({ _id: req.params.commentId });
+    const parentPost = await Post.findById(req.params.id);
+    
+    const index = parentPost.comments.indexOf(deletedComment._id)
+    console.log(index)
+    parentPost.comments.splice(index, 1);
+    parentPost.save();
+
     res.redirect(`/posts/${req.params.id}`)
 }
 
