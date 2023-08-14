@@ -35,6 +35,7 @@ try {
 
 async function remove (req, res) { 
     await Post.deleteOne({_id: req.params.id})
+    await Comment.deleteMany({parentId: req.params.id})
     res.redirect('/posts')
 }
 

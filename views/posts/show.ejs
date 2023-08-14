@@ -10,5 +10,9 @@
     <button type="submit">Delete Post</button>
 </form>
 
+<form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
+    <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
+<button type="submit">Create Comment</button>
+</form>
 
 <%- include('../partials/footer') %>
