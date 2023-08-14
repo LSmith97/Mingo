@@ -74,7 +74,6 @@
 ## Optional - Icebox Features 
 ### As a user 
 - I want to be able to sign in using Google OAuth2
-- I want to be able to edit posts and demonstrate that it's been edited.
 - I want to be able to view all comments and posts that another user has made.
 - I want to leave comments on comments
 

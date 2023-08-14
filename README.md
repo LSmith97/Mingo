@@ -42,9 +42,7 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 ## Icebox Features 
 1. Create Google OAuthorization 
-2. Delete posts and comments. 
-3. Edit and update posts and comments 
-4. View all posts and comments that a user has made. 
-5. Create multi-layer comments on comments. 
+2. View all posts and comments that a user has made. 
+3. Create multi-layer comments on comments. 
 
 ## Licenses 
