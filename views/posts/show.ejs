@@ -4,11 +4,13 @@
     <h2><%= post.title  %></h2>
     <p><%= post.body  %></p>
     <%= post.isEdited ? "edited" : "" %>
+    <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
 </div>
 
 <form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
     <button type="submit">Delete Post</button>
 </form>
+
 
 <form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
     <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>

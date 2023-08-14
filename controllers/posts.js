@@ -7,6 +7,7 @@ module.exports = {
     new: newPost,
     create,
     remove,
+    edit,
 }
 
 async function index(req, res) {
@@ -45,7 +46,6 @@ async function remove (req, res) {
 
 
 function newPost(req, res) {
-
     res.render('posts/new', {title: 'New Post', errorMsg: ""})
 }
 
@@ -62,3 +62,12 @@ async function create(req, res) {
     }
 
 } 
+
+async function edit(req, res) {
+    const post = await Post.findById(req.params.id)
+
+    res.render('posts/edit', {
+        title: 'Edit Post', 
+        post,
+        errorMsg: ""})
+}
