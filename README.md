@@ -15,7 +15,6 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 
 
-
 ## Getting Started 
 1. Click on this [link](https://) to access the Mingo app.  
 2. Once the page is loaded, you should be able to view all the posts that have been created. 
