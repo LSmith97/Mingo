@@ -22,9 +22,11 @@ async function index(req, res) {
 async function show(req, res, next) {
 try {
   const post = await Post.findById(req.params.id)
+  const allComments = await Comment.find({parentId: post._id})
   res.render("posts/show", {
     title: "Post Detail",
     post, 
+    allComments
   })
 
 } catch (err) {

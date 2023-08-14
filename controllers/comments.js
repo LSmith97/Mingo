@@ -25,6 +25,6 @@ async function create(req, res) {
 }
 
 async function remove(req, res) {
-    await Post.deleteOne({ _id: req.params.id })
-    res.redirect('/posts')
+    await Comment.deleteOne({ _id: req.params.commentId })
+    res.redirect(`/posts/${req.params.id}`)
 }
