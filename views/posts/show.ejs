@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
-   <div class= 'post-container'>
-    <%= post.title  %>
-    <%= post.body  %>
-    <%= post.isEdited  %>
+<div class= 'post-container'>
+    <h2><%= post.title  %></h2>
+    <p><%= post.body  %></p>
+    <%= post.isEdited ? "edited" : "" %>
 </div>
 
 <%- include('../partials/footer') %>
