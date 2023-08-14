@@ -4,6 +4,8 @@ const Comment = require("../models/comment")
 module.exports = {
     create,
     remove,
+    edit,
+    update: updatePost,
 }
 
 async function create(req, res) {
@@ -27,4 +29,17 @@ async function create(req, res) {
 async function remove(req, res) {
     await Comment.deleteOne({ _id: req.params.commentId })
     res.redirect(`/posts/${req.params.id}`)
+}
+
+async function edit(req, res) {
+    const comment = await Comment.findById(req.params.id)
+
+    res.render('comments/edit', {
+        title: 'Edit Post', 
+        comment,
+        errorMsg: ""})
+}
+
+async function updatePost(req, res) {
+    
 }

@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+
+<form id="new-post-form" method="POST" action="/comments/<%= comment._id %>?_method=PUT">
+    <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
+<button type="submit">Create Comment</button>
+</form>
+
+<%- include('../partials/footer') %>
