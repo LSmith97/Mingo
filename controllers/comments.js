@@ -41,5 +41,18 @@ async function edit(req, res) {
 }
 
 async function updatePost(req, res) {
-    
+    try {
+        const edittedComment = await Comment.findById(req.params.id)
+        const commentData = {...req.body} 
+        commentData.isEdited = true;
+        
+        for (key in commentData){
+            edittedComment[key] = commentData[key]
+        }
+
+        edittedComment.save()
+        res.redirect(`/posts/${edittedComment.parentId}`);
+    } catch (err) {
+        console.log(err);
+    }
 }
