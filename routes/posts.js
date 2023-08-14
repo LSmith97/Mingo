@@ -4,8 +4,8 @@ const postCtl = require('../controllers/posts');
 
 /* GET users listing. */
 router.get('/', postCtl.index);
-router.get('/:id', postCtl.show);
 router.get('/new', postCtl.new);
+router.get('/:id', postCtl.show);
 router.post('/', postCtl.create);
 
 module.exports = router;

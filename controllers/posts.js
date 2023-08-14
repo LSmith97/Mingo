@@ -11,7 +11,7 @@ module.exports = {
 async function index(req, res) {
     try {
         const results = await Post.find({})
-        res.render('/posts/index', { title: "All Posts", posts: results })
+        res.render('posts/index', { title: "All Posts", posts: results })
     } catch (err) {
         console.log(err);
     }
@@ -23,7 +23,8 @@ async function show(req, res) {
 }
 
 function newPost(req, res) {
-    res.render('posts/new')
+
+    res.render('posts/new', {title: 'New Post'})
 }
 
 async function create(req, res) {
