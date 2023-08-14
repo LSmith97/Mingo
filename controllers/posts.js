@@ -11,7 +11,7 @@ module.exports = {
 async function index(req, res) {
     try {
         const results = await Post.find({})
-        res.render('/posts/index', { title: "All Posts", posts: results })
+        res.render('posts/index', { title: "All Posts", posts: results })
     } catch (err) {
         console.log(err);
     }
