@@ -5,7 +5,8 @@ module.exports = {
     index,
     show,
     new: newPost,
-    create
+    create,
+    remove,
 }
 
 async function index(req, res) {
@@ -30,11 +31,15 @@ try {
    console.log(err)
    next(Error(err)) 
 }
-
-        
-
-
 }
+
+async function remove (req, res) { 
+    await Post.deleteOne({_id: req.params.id})
+    res.redirect('/posts')
+}
+
+
+
 
 function newPost(req, res) {
 
