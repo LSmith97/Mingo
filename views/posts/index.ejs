@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <% posts.forEach(function(p){ %>
-   <div>
+   <div class= 'post-container'>
     <%= p.title  %>
     <%= p.body  %>
      <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>

@@ -11,21 +11,46 @@ module.exports = {
 async function index(req, res) {
     try {
         const results = await Post.find({})
-        res.render('/posts/index', { title: "All Posts", posts: results })
+        res.render('posts/index', { title: "All Posts", posts: results })
     } catch (err) {
         console.log(err);
     }
 
 }
 
-async function show(req, res) {
-    res.render('posts/show')
+async function show(req, res, next) {
+try {
+  const post = await Post.findById(req.params.id)
+  res.render("posts/show", {
+    title: "Post Detail",
+    post, 
+  })
+
+} catch (err) {
+   console.log(err)
+   next(Error(err)) 
+}
+
+        
+
+
 }
 
 function newPost(req, res) {
-    res.render('posts/new')
+
+    res.render('posts/new', {title: 'New Post', errorMsg: ""})
 }
 
-async function create(req, res) {
-    res.redirect('/posts')
+async function create(req, res) { 
+    const postData = {...req.body} 
+    postData.isEdited = false 
+
+    try { 
+    const createdPost = await Post.create(postData)
+    res.redirect("/posts/" + createdPost._id)
+    } catch (err) { 
+        console.log(err); 
+        res.render("posts/new", {errorMsg: err.message})
+    }
+
 } 
