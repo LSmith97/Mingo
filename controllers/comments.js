@@ -3,7 +3,7 @@ const Comment = require("../models/comment")
 
 module.exports = {
     create,
-    remove
+    remove,
 }
 
 async function create(req, res) {

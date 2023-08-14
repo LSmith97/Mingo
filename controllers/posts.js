@@ -8,6 +8,7 @@ module.exports = {
     create,
     remove,
     edit,
+    update: updatePost,
 }
 
 async function index(req, res) {
@@ -70,4 +71,21 @@ async function edit(req, res) {
         title: 'Edit Post', 
         post,
         errorMsg: ""})
+}
+
+async function updatePost(req, res){
+    try {
+        const edittedPost = await Post.findById(req.params.id)
+        const postData = {...req.body} 
+        postData.isEdited = true
+        
+        for (key in postData){
+            edittedPost[key] = postData[key]
+        }
+
+        edittedPost.save()
+        res.redirect(`/posts/${edittedPost._id}`);
+    } catch (err) {
+        console.log(err);
+    }
 }
