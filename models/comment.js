@@ -14,8 +14,14 @@ const commentSchema = new Schema(
         isEdited: {
             type: Boolean, 
             default: false
-        }, 
-        
+        },
+        user: {
+            type: Schema.Types.ObjectId,
+            ref: 'User',
+            required: true
+        },
+        userName: String,
+        userAvatar: String
     }, {
         timestamps: true, 
     }

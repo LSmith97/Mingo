@@ -1,12 +1,12 @@
 body {
   padding: 0;
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color:rgb(33, 52, 52);
 
   display: grid;
   grid-template:
-    "header" 125px
+    "header" 150px
     "main" 1fr;
 
 }
@@ -15,16 +15,17 @@ header {
   grid-area: header;
   padding: 10px;
   background-color:rgb(79, 160, 123);
-
+  box-shadow: 0px 6px  rgb(52, 105, 81);
   display: grid;
   grid-template:
     "img navbar" 25px
     / auto 1fr;
   gap: 10px;
 }
+
  header h1 {
   font-family: 'Leckerli One', cursive;
-  font-size: 42px;
+  font-size: 60px;
   margin:0px;
   color:rgb(227, 162, 172);
   text-shadow:3px 3px rgb(33, 52, 52);
@@ -32,27 +33,30 @@ header {
  }
 
 #image {
-  height: 75px;
-  width: 75px;
-  background-color: gray;
+  height: 100px;
+  width: 100px;
   margin: 10px;
 }
 
 nav {
-  border-top: 3px solid #bbb;
-
+  border-top: 3px solid rgb(221, 72, 155);
+  width: 100%;
   display: flex;
   gap: 10px;
 }
 
 nav a {
-  background-color: lightcyan;
+  background-color:  rgb(52, 105, 81);
   padding: .5rem;
-  margin: 5px 0 0 0;
+  margin: 10px 0 0 0;
   border-radius: .5rem;
-
   text-decoration: none;
-  color: black;
+  color: aliceblue;
+  box-shadow: 3px 3px rgb(33, 52, 52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
 }
 
 main {
@@ -70,17 +74,33 @@ main {
   width: 80%;
   border-radius: .5rem;
   padding: 2%;
-  background-color: powderblue;
-
+  background-color: rgb(206, 243, 230);
+  box-shadow: 3px 3px rgb(87, 135, 135);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-size: 18px;
 }
 
 .post-container a {
   align-self: center;
   justify-self: end;
 }
+
+.post-container h2 {
+  font-weight: bold;
+}
+
+.title-line { 
+  display: flex; 
+  gap: 30px; 
+  align-items: center; 
+}
+
+.edited {
+  color: gray; 
+} 
+
 
 #new-post-form {
   background-color: gray;
@@ -103,7 +123,24 @@ main {
   align-items: center;
   gap: 10px;
   width: 80%;
-  background-color: cadetblue;
+  background-color: rgb(79, 160, 123);
+  box-shadow: 3px 3px  rgb(52, 105, 81);
   border-radius: 5px;
   padding: 10px;
+}
+
+.login img {
+  height: 30px;
+}
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
 }

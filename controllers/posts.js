@@ -52,7 +52,10 @@ function newPost(req, res) {
 
 async function create(req, res) { 
     const postData = {...req.body} 
-    postData.isEdited = false 
+    postData.isEdited = false;
+    postData.user = req.user._id
+    postData.userName = req.user.name;
+    postData.userAvatar = req.user.avatar;
 
     try { 
     const createdPost = await Post.create(postData)

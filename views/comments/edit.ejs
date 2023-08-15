@@ -2,7 +2,7 @@
 
 <form id="new-post-form" method="POST" action="/comments/<%= comment._id %>?_method=PUT">
     <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"><%= comment.body %></textarea>
-<button type="submit">Create Comment</button>
+<button type="submit">Update Comment</button>
 </form>
 
 <%- include('../partials/footer') %>

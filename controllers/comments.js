@@ -12,10 +12,11 @@ async function create(req, res) {
     const commentData = { ...req.body }
     const parent = await Post.findById(req.params.id)
     commentData.parentId = parent._id
+    commentData.user = req.user._id;
+    commentData.userName = req.user.name;
+    commentData.userAvatar = req.user.avatar;
     try {
         const createdComment = await Comment.create(commentData)
-        console.log(parent)
-        console.log(createdComment)
         parent.comments.push(createdComment._id)
         await parent.save()
         res.redirect(`/posts/${parent._id}`)
@@ -33,7 +34,6 @@ async function remove(req, res) {
     const parentPost = await Post.findById(req.params.id);
     
     const index = parentPost.comments.indexOf(deletedComment._id)
-    console.log(index)
     parentPost.comments.splice(index, 1);
     parentPost.save();
 
