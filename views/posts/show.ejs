@@ -8,19 +8,20 @@
     </div>
     <p><%= post.body  %></p>
     <% if (user?._id.equals(post.user)) { %>
-    <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+        <div class="bottom-row">
+                <form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
+                    <button type="submit">Delete Post</button>
+                </form>   
+                <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+        </div> 
     <% } %>
 </div>
 
-<% if (user?._id.equals(post.user)) { %>
-<form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
-    <button type="submit">Delete Post</button>
-</form>
-<% } %>
+
 
 <% if (user) { %>
-<form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
-    <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
+<form id="new-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
+    <textarea id="body-input" rows="4" cols="50" name="body" placeholder=" Enter text here "></textarea>
 <button type="submit">Add Comment</button>
 </form>
 <% } %>
@@ -37,10 +38,11 @@
 
             <p><%= c.body  %></p>
             <% if (user?._id.equals(c.user)) { %>
-            <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
-                <button type="submit">Delete Comment</button>
+            <div class="bottom-row"><form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
+                <button type="submit">Delete</button>
             </form>
-            <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+            <a href="/comments/<%= c._id %>/edit">Edit</a>
+            </div>
             <% } %>
         </div>
     <% }) %>

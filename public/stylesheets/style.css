@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
   background-color:rgb(33, 52, 52);
-
   display: grid;
   grid-template:
     "header" 150px
@@ -27,7 +26,7 @@ header {
   font-family: 'Leckerli One', cursive;
   font-size: 60px;
   margin:0px;
-  color:rgb(227, 162, 172);
+  color:rgb(255, 192, 229);
   text-shadow:3px 3px rgb(33, 52, 52);
 
  }
@@ -39,7 +38,7 @@ header {
 }
 
 nav {
-  border-top: 3px solid rgb(221, 72, 155);
+  border-top: 3px solid rgb(255, 192, 229);
   width: 100%;
   display: flex;
   gap: 10px;
@@ -80,11 +79,16 @@ main {
   flex-direction: column;
   align-items: flex-start;
   font-size: 18px;
+  
 }
 
-.post-container a {
-  align-self: center;
-  justify-self: end;
+.post-container > * {
+  width: 100%; 
+}
+
+.post-container > a {
+  text-align: center;
+  padding: 1% 0 0 0; 
 }
 
 .post-container h2 {
@@ -95,28 +99,88 @@ main {
   display: flex; 
   gap: 30px; 
   align-items: center; 
+  border-bottom: 3px solid rgb(87, 135, 135);
 }
 
 .edited {
-  color: gray; 
+    color: gray;
 } 
 
-
-#new-post-form {
-  background-color: gray;
+#new-post-form { 
+  display: grid;
+  gap: 15px; 
+  grid-template: 
+    "title ..... " 1fr
+    "body  ..... " 3fr
+    "body  button" 1fr
+  /1fr 200px;
   border-radius: 1rem;
-  padding: 2%;
+  padding: 1%;
   width: 80%;
+  background-color: rgb(206, 243, 230);
+  box-shadow: 3px 3px rgb(87, 135, 135);
+} 
 
-
-  display: flex;
-  flex-direction: column;
+#new-post-form *, #new-comment-form * {
+  font: 18px "Quicksand", sans-serif;
 }
 
-#new-post-form * {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#new-post-form > #title-input {
+  grid-area: title; 
+  height: 30px; 
+  border-radius: 1rem; 
+  padding: 1%;
 }
 
+#new-post-form > #body-input {
+  grid-area: body; 
+  height: 200px; 
+  border-radius: 1rem; 
+  padding: 1%;
+}
+
+#new-post-form > button {
+  grid-area: button; 
+  border-radius: 1rem;
+  background-color:  rgb(52, 105, 81);
+  color: aliceblue;
+  box-shadow: 3px 3px rgb(33, 52, 52);
+}
+textarea {
+  resize: none;
+}
+
+#new-comment-form { 
+  display: grid;
+  gap: 15px; 
+  grid-template: 
+    "body ." 3fr
+    "body button" 1fr
+  /1fr 200px;
+  border-radius: 1rem;
+  padding: 1%;
+  width: 80%;
+  background-color: rgb(206, 243, 230);
+  box-shadow: 3px 3px rgb(87, 135, 135);
+ 
+}
+
+#new-comment-form > #body-input {
+  grid-area: body; 
+  height: 200px; 
+  border-radius: 1rem;
+  padding: 1%;
+}
+
+#new-comment-form > button {
+  grid-area: button; 
+  border-radius: 1rem;
+  background-color:  rgb(52, 105, 81);
+  color: aliceblue;
+  box-shadow: 3px 3px rgb(33, 52, 52);
+}
+
+  
 .comments-container {
   display: flex;
   flex-direction: column;
@@ -126,7 +190,39 @@ main {
   background-color: rgb(79, 160, 123);
   box-shadow: 3px 3px  rgb(52, 105, 81);
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 0 40px 0;
+}
+.comments-container .post-container {
+  width: 90%; 
+}
+
+.bottom-row {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+  gap: 30px; 
+  width: 100%; 
+  border-top: 3px solid rgb(87, 135, 135);
+}
+.bottom-row button, .bottom-row a { 
+  align-self: center;
+  margin: 10px 0 0 0; 
+  border-radius: 1rem;
+  background-color:  rgb(52, 105, 81);
+  font: 16px "Quicksand", sans-serif; 
+  text-decoration: none;
+  color: aliceblue;
+  box-shadow: 3px 3px rgb(33, 52, 52);
+  padding: 5px; 
+  border-style: outset;
+  border-width: 2px;
+  border-color: buttonborder;
+} 
+
+.bottom-row form { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
 }
 
 .login img {
