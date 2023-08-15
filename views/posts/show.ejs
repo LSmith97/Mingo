@@ -5,18 +5,23 @@
     <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></p>
     <p><%= post.body  %></p>
     <%= post.isEdited ? "edited" : "" %>
+    <% if (user?._id.equals(post.user)) { %>
     <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+    <% } %>
 </div>
 
+<% if (user?._id.equals(post.user)) { %>
 <form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
     <button type="submit">Delete Post</button>
 </form>
+<% } %>
 
-
+<% if (user) { %>
 <form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
     <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
 <button type="submit">Create Comment</button>
 </form>
+<% } %>
 
 <section class="comments-container">
     <h2>Comments</h2>
@@ -25,10 +30,12 @@
             <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></p>
             <p><%= c.body  %></p>
             <%= c.isEdited ? "edited" : "" %>
+            <% if (user?._id.equals(c.user)) { %>
             <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
                 <button type="submit">Delete Comment</button>
             </form>
             <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+            <% } %>
         </div>
     <% }) %>
 </section>
