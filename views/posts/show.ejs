@@ -30,7 +30,7 @@
     <% allComments.forEach(c =>{ %>
         <div class= 'post-container'>
             <div class="title-line">
-                <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></p>
+                <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" > <%= c.userName %></p>
                 <p class="edited"><%= c.isEdited ? "edited" : "" %></p>
 
             </div>
