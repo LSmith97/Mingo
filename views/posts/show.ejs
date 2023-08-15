@@ -2,6 +2,7 @@
 
 <div class= 'post-container'>
     <h2><%= post.title  %></h2>
+    <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></p>
     <p><%= post.body  %></p>
     <%= post.isEdited ? "edited" : "" %>
     <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
@@ -21,6 +22,7 @@
     <h2>Comments</h2>
     <% allComments.forEach(c =>{ %>
         <div class= 'post-container'>
+            <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></p>
             <p><%= c.body  %></p>
             <%= c.isEdited ? "edited" : "" %>
             <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
