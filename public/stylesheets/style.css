@@ -91,6 +91,16 @@ main {
   font-weight: bold;
 }
 
+.title-line { 
+  display: flex; 
+  gap: 30px; 
+  align-items: center; 
+}
+
+.edited {
+  color: gray; 
+} 
+
 
 #new-post-form {
   background-color: gray;
