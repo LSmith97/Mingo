@@ -1,7 +1,13 @@
 <%- include('../partials/header') %>
 
-<div class="post-container"></div>
-<div class="post-container"></div>
+<% posts.forEach(function(p){ %>
+   <div class= 'post-container'>
+    <h2><%= p.title  %></h2>
+    <p><%= p.body  %></p>
+    <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
+    <%= p.isEdited ? "edited" : "" %>
+    </div>
+<%})%>
 
 <%- include('../partials/footer') %>
 

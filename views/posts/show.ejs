@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<div class= 'post-container'>
+    <h2><%= post.title  %></h2>
+    <p><%= post.body  %></p>
+    <%= post.isEdited ? "edited" : "" %>
+    <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+</div>
+
+<form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
+    <button type="submit">Delete Post</button>
+</form>
+
+
+<form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
+    <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
+<button type="submit">Create Comment</button>
+</form>
+
+<section class="comments-container">
+    <h2>Comments</h2>
+    <% allComments.forEach(c =>{ %>
+        <div class= 'post-container'>
+            <p><%= c.body  %></p>
+            <%= c.isEdited ? "edited" : "" %>
+            <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
+                <button type="submit">Delete Comment</button>
+            </form>
+            <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+        </div>
+    <% }) %>
+</section>
+
+<%- include('../partials/footer') %>
