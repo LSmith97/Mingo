@@ -3,7 +3,7 @@
 <div class= 'post-container'>
     <div class="title-line">
         <h2><%= post.title  %></h2>
-        <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></p>
+        <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><a href="/users/<%= post.user %>"><%= post.userName %></a></p>
         <p class="edited"><%= post.isEdited ? "edited" : "" %></p>
     </div>
     <p><%= post.body  %></p>
@@ -30,7 +30,7 @@
     <% allComments.forEach(c =>{ %>
         <div class= 'post-container'>
             <div class="title-line">
-                <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" > <%= c.userName %></p>
+                <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><a href="/users/<%= c.user %>"><%= c.userName %></a></p>
                 <p class="edited"><%= c.isEdited ? "edited" : "" %></p>
 
             </div>
