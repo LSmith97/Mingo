@@ -14,7 +14,8 @@ require("./config/passport")
 
 const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/posts');
-const commentsRouter = require('./routes/comments')
+const commentsRouter = require('./routes/comments');
+const usersRouter = require('./routes/users');
 
 
 const app = express();
@@ -42,7 +43,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/', commentsRouter)
+app.use('/', commentsRouter);
+app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
 
 
