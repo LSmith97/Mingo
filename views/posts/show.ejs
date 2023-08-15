@@ -37,10 +37,11 @@
 
             <p><%= c.body  %></p>
             <% if (user?._id.equals(c.user)) { %>
-            <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
-                <button type="submit">Delete Comment</button>
+            <div class="bottom-row"><form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
+                <button type="submit">Delete</button>
             </form>
-            <a href="/comments/<%= c._id %>/edit">Edit Comment</a>
+            <a href="/comments/<%= c._id %>/edit">Edit</a>
+            </div>
             <% } %>
         </div>
     <% }) %>
