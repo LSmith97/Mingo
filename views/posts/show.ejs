@@ -8,15 +8,16 @@
     </div>
     <p><%= post.body  %></p>
     <% if (user?._id.equals(post.user)) { %>
-    <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+        <div class="bottom-row">
+                <form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
+                    <button type="submit">Delete Post</button>
+                </form>   
+                <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+        </div> 
     <% } %>
 </div>
 
-<% if (user?._id.equals(post.user)) { %>
-<form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
-    <button type="submit">Delete Post</button>
-</form>
-<% } %>
+
 
 <% if (user) { %>
 <form id="new-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
