@@ -1,9 +1,24 @@
 <%- include('../partials/header') %>
 
 <div class= 'post-container'>
+    <h2>User Details:</h2>
     <p class="review-user"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" ><%= user.name %></p>
     <p>Email: <%= user.email %></p>
     <p>Member Since: <%= user.createdAt.toLocaleDateString() %></p>
 </div>
 
+<section class="comments-container">
+    <h2>Posts</h2>
+
+    <% allPosts.forEach(function(p){ %>
+        <div class= 'post-container'>
+             <div class="title-line">
+                 <h2><%= p.title  %></h2>
+                 <p class="edited"><%= p.isEdited ? "edited" : "" %></p>
+             </div>
+             <p><%= p.body  %></p>
+             <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
+         </div>
+     <%})%>
+</div>
 <%- include('../partials/footer') %>
