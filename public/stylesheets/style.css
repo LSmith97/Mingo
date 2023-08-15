@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color:rgb(33, 52, 52);
 
   display: grid;
@@ -15,13 +15,14 @@ header {
   grid-area: header;
   padding: 10px;
   background-color:rgb(79, 160, 123);
-
+  box-shadow: 0px 6px  rgb(52, 105, 81);
   display: grid;
   grid-template:
     "img navbar" 25px
     / auto 1fr;
   gap: 10px;
 }
+
  header h1 {
   font-family: 'Leckerli One', cursive;
   font-size: 42px;
@@ -39,9 +40,10 @@ header {
 
 nav {
   border-top: 3px solid #bbb;
-
+  width: 100%;
   display: flex;
   gap: 10px;
+  border: 1px solid red;
 }
 
 nav a {
@@ -49,9 +51,13 @@ nav a {
   padding: .5rem;
   margin: 5px 0 0 0;
   border-radius: .5rem;
-
   text-decoration: none;
   color: black;
+  box-shadow: 3px 3px  rgb(52, 105, 81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
 }
 
 main {
@@ -70,8 +76,7 @@ main {
   border-radius: .5rem;
   padding: 2%;
   background-color: powderblue;
-  border:4px solid rgb(227, 162, 172);
-
+  box-shadow: 3px 3px rgb(87, 135, 135);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -81,6 +86,11 @@ main {
   align-self: center;
   justify-self: end;
 }
+
+.post-container h2 {
+  font-weight: bold;
+}
+
 
 #new-post-form {
   background-color: gray;
@@ -103,16 +113,10 @@ main {
   align-items: center;
   gap: 10px;
   width: 80%;
-  background-color: cadetblue;
+  background-color: rgb(79, 160, 123);
+  box-shadow: 3px 3px  rgb(52, 105, 81);
   border-radius: 5px;
   padding: 10px;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
 }
 
 .login img {
