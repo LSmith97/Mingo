@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+
+<div class= 'post-container'>
+    <p class="review-user"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" ><%= user.name %></p>
+    <p>Email: <%= user.email %></p>
+    <p>Member Since: <%= user.createdAt.toLocaleDateString() %></p>
+</div>
+
+<%- include('../partials/footer') %>
