@@ -19,8 +19,8 @@
 <% } %>
 
 <% if (user) { %>
-<form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
-    <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
+<form id="new-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
+    <textarea id="body-input" rows="4" cols="50" name="body" placeholder=" Enter text here "></textarea>
 <button type="submit">Add Comment</button>
 </form>
 <% } %>
