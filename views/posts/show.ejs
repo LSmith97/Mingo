@@ -1,10 +1,12 @@
 <%- include('../partials/header') %>
 
 <div class= 'post-container'>
-    <h2><%= post.title  %></h2>
-    <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></p>
+    <div class="title-line">
+        <h2><%= post.title  %></h2>
+        <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><%= post.userName %></p>
+        <p class="edited"><%= post.isEdited ? "edited" : "" %></p>
+    </div>
     <p><%= post.body  %></p>
-    <%= post.isEdited ? "edited" : "" %>
     <% if (user?._id.equals(post.user)) { %>
     <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
     <% } %>
@@ -19,7 +21,7 @@
 <% if (user) { %>
 <form id="new-post-form" method="POST" action="/posts/<%= post._id %>/comments">
     <textarea id="freeform" rows="4" cols="50" name="body" placeholder="Enter text here"></textarea>
-<button type="submit">Create Comment</button>
+<button type="submit">Add Comment</button>
 </form>
 <% } %>
 
@@ -27,9 +29,13 @@
     <h2>Comments</h2>
     <% allComments.forEach(c =>{ %>
         <div class= 'post-container'>
-            <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><%= c.userName %></p>
+            <div class="title-line">
+                <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" > <%= c.userName %></p>
+                <p class="edited"><%= c.isEdited ? "edited" : "" %></p>
+
+            </div>
+
             <p><%= c.body  %></p>
-            <%= c.isEdited ? "edited" : "" %>
             <% if (user?._id.equals(c.user)) { %>
             <form id="delete-comment" method="POST" action="/posts/<%= post._id %>/comments/<%= c._id %>?_method=DELETE">
                 <button type="submit">Delete Comment</button>
