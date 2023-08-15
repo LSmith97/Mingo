@@ -1,19 +1,17 @@
 <%- include('../partials/header') %>
 
 <% posts.forEach(function(p){ %>
-
-
-    
-
    <div class= 'post-container'>
-    <div class="title-line">
-        <h2><%= p.title  %></h2>
-        <p class="review-user"><img alt="avatar" src="<%= p.userAvatar %>" referrerpolicy="no-referrer" ><%= p.userName %></p>
-        <p class="edited"><%= p.isEdited ? "edited" : "" %></p>
+        <div class="title-line">
+            <h2><%= p.title  %></h2>
+            <p class="review-user"><img alt="avatar" src="<%= p.userAvatar %>" referrerpolicy="no-referrer" >
+                <a href="/users/<%= p.user %>"><%= p.userName %></a>
+            </p>
+            <p class="edited"><%= p.isEdited ? "edited" : "" %></p>
+        </div>
+        <p><%= p.body  %></p>
+        <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
     </div>
-    <p><%= p.body  %></p>
-    <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
-     </div>
 <%})%>
 
 <%- include('../partials/footer') %>
