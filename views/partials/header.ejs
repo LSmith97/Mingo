@@ -17,10 +17,10 @@
         
         <h1>Mingo</h1>
         <nav>
-            <a href="/">HOME</a>
+            <a href="/" id="icons">HOME</a>
             <% if (user) {%>
-                <a href="/posts/new">CREATE POST</a>
-                <a href="/logout">LOG OUT</a>
+                <a href="/posts/new" id="icons">CREATE POST</a>
+                <a href="/logout" id="icons">LOG OUT</a>
             <% } else { %>
                 <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
             <% } %>
