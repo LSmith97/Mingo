@@ -14,9 +14,9 @@
     <% if (user?._id.equals(post.user)) { %>
         <div class="bottom-row">
                 <form id="delete-post" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
-                    <button type="submit">Delete Post</button>
+                    <button type="submit">Delete</button>
                 </form>   
-                <a href="/posts/<%=post._id%>/edit"> Edit Post</a>
+                <a href="/posts/<%=post._id%>/edit">Edit</a>
         </div> 
     <% } %>
 </div>
@@ -26,7 +26,7 @@
 <% if (user) { %>
 <form id="new-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
     <textarea id="body-input" rows="4" cols="50" name="body" placeholder=" Enter text here "></textarea>
-<button type="submit">Add Comment</button>
+<button type="submit">Comment</button>
 </form>
 <% } %>
 
