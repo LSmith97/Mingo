@@ -13,8 +13,8 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const results = await Post.find({})
-        res.render('posts/index', { title: "All Posts", posts: results })
+        const results = await Post.find({}).sort({createdAt: -1}).limit(25)
+        res.render('posts/index', { title: "Recent Posts", posts: results })
     } catch (err) {
         console.log(err);
     }
@@ -26,7 +26,7 @@ try {
   const post = await Post.findById(req.params.id)
   const allComments = await Comment.find({parentId: post._id})
   res.render("posts/show", {
-    title: "Post Detail",
+    title: "Post Details",
     post, 
     allComments
   })
