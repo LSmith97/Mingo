@@ -4,7 +4,11 @@
     <div class="title-line">
         <h2><%= post.title  %></h2>
         <p class="review-user"><img alt="avatar" src="<%= post.userAvatar %>" referrerpolicy="no-referrer" ><a href="/users/<%= post.user %>"><%= post.userName %></a></p>
-        <p class="edited"><%= post.isEdited ? "edited" : "" %></p>
+        <% if (post.isEdited) { %> 
+            <p class="edited">edited <%= post.updatedAt.toLocaleString()  %></p>
+        <% } else { %>
+            <p class="edited">posted <%= post.createdAt.toLocaleString() %></p>
+        <% } %>
     </div>
     <p><%= post.body  %></p>
     <% if (user?._id.equals(post.user)) { %>
@@ -32,7 +36,11 @@
         <div class= 'post-container'>
             <div class="title-line">
                 <p class="review-user"><img alt="avatar" src="<%= c.userAvatar %>" referrerpolicy="no-referrer" ><a href="/users/<%= c.user %>"><%= c.userName %></a></p>
-                <p class="edited"><%= c.isEdited ? "edited" : "" %></p>
+                <% if (c.isEdited) { %> 
+                    <p class="edited">edited <%= c.updatedAt.toLocaleString()  %></p>
+                <% } else { %>
+                    <p class="edited">posted <%= c.createdAt.toLocaleString() %></p>
+                <% } %>
 
             </div>
 
