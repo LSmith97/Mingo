@@ -1,5 +1,5 @@
 # Mingo
-##### Mingo is a minimalist, text-based app that allows for users to create subject-based posts and respond with comments. 
+##### Mingo is a minimalist, text-based app (inspired by Twitter) that allows for users to create subject-based posts and respond with comments. 
 
 Link to App: [Mingo](https://)
 
@@ -17,22 +17,24 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 ## Getting Started 
 1. Click on this [link](https://) to access the Mingo app.  
-2. Once the page is loaded, you should be able to view all the posts that have been created. 
+2. On the home page, you should be able to view all posts that have been created. 
 3. To make a post, complete the following steps:  
-    a. Click on 'Make a Flam' 
-    b. Enter a title for your post.  What subject will you be discussing? 
-    c. Enter your thoughts in the provided box. 
-    d. Click 'Create Post' to save your post. 
-4. To make a post, complete the following steps: 
-    a. Click the icon on the post to open up the comment box. 
-    b. Enter your comment. 
-    c. Click 'Post Comment' to save your comment. 
-5. To view all posts, click on the 'Home' link in the nav bar. 
+    a. Log in using your Google account. 
+    b. Click on 'Create a Post'.  
+    c. Enter a title for your post.  What subject will you be discussing? 
+    d. Enter your thoughts in the provided box. 
+    e. Click 'Create Post' to save your post. 
+4. To edit or delete an existing post OR view, add, or edit comments to an existing post,  
+    a. Log in using your Google account. 
+    b. Click on the comments link.  
+    c. Choose the corresponding option. 
+    d. Note that if no comments have been added, no comments will appear.   
 
 ## Technologies Used
 -   Mongoose 
 -   MongoDB
 -   Express
+-   Heroku 
 -   Node 
 -   HTML
 -   CSS
@@ -41,8 +43,6 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 ## Acknowledgements 
 
 ## Icebox Features 
-1. Create Google OAuthorization 
-2. View all posts and comments that a user has made. 
-3. Create multi-layer comments on comments. 
+1. 
 
 ## Licenses 
