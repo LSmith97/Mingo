@@ -2,7 +2,7 @@
 
 <form id="new-post-form" method="POST" action="/posts">
     <input id="title-input" type="text" name="title" placeholder="Enter a title" required>
-    <textarea id="body-input" rows="4" cols="50" name="body" placeholder=" Enter your post here" required></textarea>
+    <textarea id="body-input" rows="4" cols="50" maxlength="250" name="body" placeholder=" Enter your post here" required></textarea>
     <button type="submit">Submit Post</button>
 </form>
 

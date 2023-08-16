@@ -9,6 +9,7 @@ const commentSchema = new Schema(
         },
         body: { 
             type: String,
+            max: 250, 
             required: true, 
         }, 
         isEdited: {

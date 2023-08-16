@@ -25,11 +25,12 @@
 
 <% if (user) { %>
 <form id="new-comment-form" method="POST" action="/posts/<%= post._id %>/comments">
-    <textarea id="body-input" rows="4" cols="50" name="body" placeholder=" Enter text here "></textarea>
+    <textarea id="body-input" rows="4" cols="50" maxlength="250" name="body" placeholder=" Enter text here "></textarea>
 <button type="submit">Comment</button>
 </form>
 <% } %>
 
+<% if (allComments.length) { %>
 <section class="comments-container">
     <h2>Comments</h2>
     <% allComments.forEach(c =>{ %>
@@ -55,5 +56,6 @@
         </div>
     <% }) %>
 </section>
+<% } %>
 
 <%- include('../partials/footer') %>

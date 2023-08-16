@@ -9,6 +9,7 @@ const postSchema = new Schema(
         }, 
         body: { 
             type: String,
+            max: 250, 
             required: true, 
         }, 
         comments: [{
