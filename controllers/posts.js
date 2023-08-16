@@ -13,7 +13,7 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const results = await Post.find({}).sort({createdAt: -1}).limit(25)
+        const results = await Post.find({}).sort({createdAt: -1}).limit(10)
         res.render('posts/index', { title: "Recent Posts", posts: results })
     } catch (err) {
         console.log(err);
