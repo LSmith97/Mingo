@@ -22,7 +22,7 @@ header {
   gap: 10px;
 }
 
- header h1 {
+header h1 {
   font-family: 'Leckerli One', cursive;
   font-size: 60px;
   margin:0px;
@@ -115,7 +115,7 @@ main {
     "body  button" 1fr
   /1fr 200px;
   border-radius: 1rem;
-  padding: 1%;
+  padding: 2%;
   width: 80%;
   background-color: rgb(206, 243, 230);
   box-shadow: 3px 3px rgb(87, 135, 135);
@@ -154,11 +154,11 @@ textarea {
   display: grid;
   gap: 15px; 
   grid-template: 
-    "body ." 3fr
+    "body ." 2fr
     "body button" 1fr
-  /1fr 200px;
+  /1fr 150px;
   border-radius: 1rem;
-  padding: 1%;
+  padding: 2%;
   width: 80%;
   background-color: rgb(206, 243, 230);
   box-shadow: 3px 3px rgb(87, 135, 135);
@@ -167,7 +167,7 @@ textarea {
 
 #new-comment-form > #body-input {
   grid-area: body; 
-  height: 200px; 
+  height: 90%; 
   border-radius: 1rem;
   padding: 1%;
 }
@@ -231,7 +231,7 @@ textarea {
 
 .review-user {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 10px;
 }
@@ -239,4 +239,48 @@ textarea {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+@media screen and (max-width: 500px) { 
+  body { 
+    grid-template:
+    "header" 100px
+    "main" 1fr;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+ 
+  #image {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+  }
+  .edited { 
+    display: collapse; 
+    visibility: hidden; 
+  }
+  * { 
+    font-size: 10px; 
+  }
+  #new-post-form *, #new-comment-form * {
+    font-size: 10px 
+  }
+  #new-comment-form { 
+    grid-template: 
+      "body ." 1fr
+      "body button" 1fr
+    /1fr 25%;  
+  }
+  .bottom-row button, .bottom-row a {
+    font-size: 10px;
+  }
+  #new-post-form { 
+    grid-template: 
+      "title . " 1fr
+      "body  . " 4fr
+      "body  button" 1fr
+    /1fr 25%;
+  } 
 }
