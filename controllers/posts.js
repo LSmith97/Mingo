@@ -9,6 +9,7 @@ module.exports = {
     remove,
     edit,
     update: updatePost,
+    allPosts,
 }
 
 async function index(req, res) {
@@ -88,6 +89,17 @@ async function updatePost(req, res){
 
         edittedPost.save()
         res.redirect(`/posts/${edittedPost._id}`);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+async function allPosts(req, res){
+    try {
+        const POSTS_PER_PAGE = 5;
+        const pageNum = Number(req.params.pageNum);
+        const results = await Post.find({}).sort({createdAt: -1}).limit(POSTS_PER_PAGE).skip((pageNum-1) * POSTS_PER_PAGE);
+        res.render('posts/all', { title: "All Posts", posts: results, pageNum, POSTS_PER_PAGE});
     } catch (err) {
         console.log(err);
     }

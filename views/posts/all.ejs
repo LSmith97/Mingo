@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+
+<% posts.forEach(function(p){ %>
+    <div class= 'post-container'>
+         <div class="title-line">
+             <a href="/posts/<%=p._id%>"><h2><%= p.title  %></h2></a>
+             <p class="review-user"><img alt="avatar" src="<%= p.userAvatar %>" referrerpolicy="no-referrer" ><a href="/users/<%= p.user %>"><%= p.userName %></a></p>
+             <% if (p.isEdited) { %> 
+                 <p class="edited">edited <%= p.updatedAt.toLocaleString()  %></p>
+             <% } else { %>
+                 <p class="edited">posted <%= p.createdAt.toLocaleString() %></p>
+             <% } %>           
+                 
+             
+         </div>
+         <p><%= p.body  %></p>
+         <a href="/posts/<%= p._id %>"><%=p.comments.length%> Comments</a>
+     </div>
+<% }) %>
+
+<div class="post-container">
+    <div class="title-line">
+        <% if (pageNum > 1) { %>
+        <a href="/posts/pages/<%= pageNum-1 %>">Previous Page</a>
+        <% } %>
+        <p> Current Page: <%= pageNum %></p>
+        <% if (posts.length >= POSTS_PER_PAGE) { %>
+        <a href="/posts/pages/<%= pageNum+1 %>">Next Page</a>
+        <% } %>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
