@@ -242,10 +242,6 @@ textarea {
 }
 
 @media screen and (max-width: 500px) { 
-  *{
-    border: 1px solid red; 
-  }
-  
   body { 
     grid-template:
     "header" 100px
@@ -260,10 +256,6 @@ textarea {
     height: 50px;
     width: 50px;
     margin: 5px;
-  }
-  main { 
-    padding: 0px; 
-    gap: 0px;
   }
   .edited { 
     display: collapse; 
