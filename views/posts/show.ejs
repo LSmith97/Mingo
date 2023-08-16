@@ -30,6 +30,7 @@
 </form>
 <% } %>
 
+<% if (allComments.length) { %>
 <section class="comments-container">
     <h2>Comments</h2>
     <% allComments.forEach(c =>{ %>
@@ -55,5 +56,6 @@
         </div>
     <% }) %>
 </section>
+<% } %>
 
 <%- include('../partials/footer') %>
