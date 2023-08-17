@@ -44,7 +44,7 @@ async function edit(req, res) {
     const comment = await Comment.findById(req.params.id)
 
     res.render('comments/edit', {
-        title: 'Edit Post', 
+        title: 'Edit Comment', 
         comment,
         errorMsg: ""})
 }
