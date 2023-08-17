@@ -315,10 +315,10 @@ textarea {
     visibility: hidden; 
   }
   * { 
-    font-size: 10px; 
+    font-size: 12px; 
   }
   #new-post-form *, #new-comment-form * {
-    font-size: 10px 
+    font-size: 12px 
   }
   #new-comment-form { 
     grid-template: 
@@ -327,7 +327,7 @@ textarea {
     /1fr 25%;  
   }
   .bottom-row button, .bottom-row a {
-    font-size: 10px;
+    font-size: 12px;
   }
   #new-post-form { 
     grid-template: 
