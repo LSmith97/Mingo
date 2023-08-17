@@ -16,19 +16,46 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 
 ## Getting Started 
-1. Click on this [link](https://) to access the Mingo app.  
-2. On the home page, you should be able to view all posts that have been created. 
-3. To make a post, complete the following steps:  
-    a. Log in using your Google account. 
-    b. Click on 'Create a Post'.  
-    c. Enter a title for your post.  What subject will you be discussing? 
-    d. Enter your thoughts in the provided box. 
-    e. Click 'Create Post' to save your post. 
-4. To edit or delete an existing post OR view, add, or edit comments to an existing post,  
-    a. Log in using your Google account. 
-    b. Click on the comments link.  
-    c. Choose the corresponding option. 
-    d. Note that if no comments have been added, no comments will appear.   
+ Click on this [link](https://) to access the Mingo app.  
+<h2>How do I use Mingo? </h2>
+
+<h4> To view posts, click on:</h4>
+<ul>
+    <li>Recent Posts to view 10 most recent posts </li>
+    <li>All Posts to view all posts</li>
+    <li>Scroll to the bottom of page and click Next Page to view more posts</li>
+</ul>
+
+<h4>To make a post, complete the following steps: </h4>
+    <ul>
+        <li> Log in using your Google account </li>
+        <li> Click on 'Create Post'</li>  
+        <li> Enter a title for your post.  What subject will you be discussing? </li>  
+        <li> Enter your thoughts in the provided box(250 characters max) </li> 
+        <li> Click 'Submit Post' to publish your post </li> 
+    </ul>
+
+
+<h4> To edit or delete an existing post: </h4> 
+<ul>  
+        <li> Log in using your Google account </li>
+        <li> Click on the title </li>  
+        <li> Click the Edit or Delete button respectively</li>
+        <li> Edit your content </li>
+        <li> Click Update button to save edits</li>
+    </ul>
+<h4>  To view or add comments to an existing post:</h4> 
+<ul>  
+    <li> Log in using your Google account </li>
+    <li> Click on the comments icon</li>  
+    <li> Add your comment</li>
+    <li> Click on Comment button to save </li>
+</ul>
+<h4>  To edit or delete comments to an existing post:</h4> 
+<ul>
+    <li> Click the Edit or Delete button respectively</li>
+    <li> Click Update button to save edits</li>
+</ul>   
 
 ## Technologies Used
 -   Mongoose 
