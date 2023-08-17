@@ -69,7 +69,14 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 ## Acknowledgements 
 
-## Icebox Features 
-1. 
+- Comment Icon by <a href="https://www.vecteezy.com/free-vector/abstract">Abstract Vectors by Vecteezy</a>
+- Image logo by <a href="https://www.freepik.com/free-vector/set-pink-flamingos-with-different-poses_2266747.htm#query=flamingo%20icon&position=2&from_view=search&track=ais">Freepik</a>
 
-## Licenses 
+## Icebox Features 
+
+- Cloudinary Support 
+- Categories/Groups pagination
+- Direct messaging between users
+- Filter, Sort, Search functionality
+- Real-time notifications
+
