@@ -74,7 +74,7 @@ main {
   border-radius: .5rem;
   padding: 2%;
   background-color: rgb(206, 243, 230);
-  box-shadow: 3px 3px rgb(87, 135, 135);
+  box-shadow: 5px 5px rgb(87, 135, 135);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -190,7 +190,7 @@ textarea {
   gap: 10px;
   width: 80%;
   background-color: rgb(79, 160, 123);
-  box-shadow: 3px 3px  rgb(52, 105, 81);
+  box-shadow: 5px 5px  rgb(52, 105, 81);
   border-radius: 5px;
   padding: 10px 0 40px 0;
 }
@@ -239,6 +239,7 @@ textarea {
 }
 
 .review-user img {
+  box-shadow: 1.5px 1.5px rgb(33, 52, 52);
   border-radius: 50%;
   height: 40px;
 }
