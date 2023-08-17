@@ -1,7 +1,10 @@
 <%- include('../partials/header') %>
 
+<div class="page-title">
+    <h1> ~ User Details ~</h1>
+</div>
+
 <div class= 'post-container'>
-    <h2>User Details:</h2>
     <p class="review-user"><img alt="avatar" src="<%= user.avatar %>" referrerpolicy="no-referrer" ><%= user.name %></p>
     <p>Email: <%= user.email %></p>
     <p>Member Since: <%= user.createdAt.toLocaleDateString() %></p>
