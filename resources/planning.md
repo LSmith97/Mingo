@@ -5,7 +5,7 @@
 ### Team Members: Joshua Hsu, Harkirat Singh, Lily Smith.
 
 ## Roles: 
-- Frontend - Harkirat/Lily 
+- Frontend - Harkirat/Josh/Lily
 - Backend - Lily/Josh/Harkirat
 - Git wrangler - Josh
 - Design lead - Josh 

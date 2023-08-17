@@ -1,7 +1,7 @@
 # Mingo
 ##### Mingo is a minimalist, text-based app (inspired by Twitter) that allows for users to create subject-based posts and respond with comments. 
 
-Link to App: [Mingo](https://)
+Link to App: [Mingo](https://mingo-b8899ae399d9.herokuapp.com/)
 
 ##Credits
 ###### Created by Joshua Hsu, Harkirat Singh, and Lily Smith 
