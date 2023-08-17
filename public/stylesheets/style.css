@@ -69,12 +69,19 @@ main {
   align-items: center;
 }
 
+.page-title h1{
+  font-family: 'Leckerli One', cursive;
+  font-size: 40px;
+  color:rgb(255, 192, 229);
+  text-shadow: 3px 3px rgb(16, 23, 23);
+ }
+
 .post-container {
   width: 80%;
   border-radius: .5rem;
   padding: 2%;
   background-color: rgb(206, 243, 230);
-  box-shadow: 3px 3px rgb(87, 135, 135);
+  box-shadow: 5px 5px rgb(87, 135, 135);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -142,6 +149,7 @@ main {
 #new-post-form > button {
   grid-area: button; 
   border-radius: 1rem;
+  border-color: grey;
   background-color:  rgb(52, 105, 81);
   color: aliceblue;
   box-shadow: 3px 3px rgb(33, 52, 52);
@@ -175,6 +183,7 @@ textarea {
 #new-comment-form > button {
   grid-area: button; 
   border-radius: 1rem;
+  border-color: grey;
   background-color:  rgb(52, 105, 81);
   color: aliceblue;
   box-shadow: 3px 3px rgb(33, 52, 52);
@@ -188,7 +197,7 @@ textarea {
   gap: 10px;
   width: 80%;
   background-color: rgb(79, 160, 123);
-  box-shadow: 3px 3px  rgb(52, 105, 81);
+  box-shadow: 5px 5px  rgb(52, 105, 81);
   border-radius: 5px;
   padding: 10px 0 40px 0;
 }
@@ -212,11 +221,11 @@ textarea {
   font: 16px "Quicksand", sans-serif; 
   text-decoration: none;
   color: aliceblue;
-  box-shadow: 3px 3px rgb(33, 52, 52);
   padding: 5px; 
   border-style: outset;
   border-width: 2px;
-  border-color: buttonborder;
+  border-color: grey;
+  box-shadow: 3px 3px rgb(33, 52, 52);
 } 
 
 .bottom-row form { 
@@ -237,8 +246,52 @@ textarea {
 }
 
 .review-user img {
+  box-shadow: 1.5px 1.5px rgb(33, 52, 52);
   border-radius: 50%;
   height: 40px;
+}
+
+.comment-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid rgb(87, 135, 135);
+  gap: 5px;
+}
+
+.comment-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.comment-icon:hover {
+  filter: invert(80%) drop-shadow(3px 3px rgb(33, 52, 52));
+}
+
+.about-container {
+  width: 80%;
+  border-radius: .5rem;
+  padding: 2%;
+  background-color: rgb(206, 243, 230);
+  box-shadow: 5px 5px rgb(87, 135, 135);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  line-height:1.25;
+  background-image: url(https://i.imgur.com/yNkRDwg.png);
+  background-repeat: no-repeat;
+  background-position: bottom 20px right 20px;
+  background-size: 25%;
+  
+}
+
+.about-container > * {
+  width: 100%; 
+}
+
+.about-container h2 {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 500px) { 

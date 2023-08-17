@@ -6,8 +6,10 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 /* GET users listing. */
 router.get('/', postCtl.index);
 router.get('/new', ensureLoggedIn, postCtl.new);
+router.get('/pages/:pageNum', postCtl.allPosts)
 router.get('/:id/edit', ensureLoggedIn, postCtl.edit);
 router.get('/:id', postCtl.show);
+
 
 
 router.post('/', ensureLoggedIn, postCtl.create);

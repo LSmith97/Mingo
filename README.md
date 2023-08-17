@@ -1,5 +1,5 @@
 # Mingo
-##### Mingo is a minimalist, text-based app that allows for users to create subject-based posts and respond with comments. 
+##### Mingo is a minimalist, text-based app (inspired by Twitter) that allows for users to create subject-based posts and respond with comments. 
 
 Link to App: [Mingo](https://)
 
@@ -20,23 +20,52 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 
 ## Getting Started 
-1. Click on this [link](https://) to access the Mingo app.  
-2. Once the page is loaded, you should be able to view all the posts that have been created. 
-3. To make a post, complete the following steps:  
-    a. Click on 'Make a Flam' 
-    b. Enter a title for your post.  What subject will you be discussing? 
-    c. Enter your thoughts in the provided box. 
-    d. Click 'Create Post' to save your post. 
-4. To make a post, complete the following steps: 
-    a. Click the icon on the post to open up the comment box. 
-    b. Enter your comment. 
-    c. Click 'Post Comment' to save your comment. 
-5. To view all posts, click on the 'Home' link in the nav bar. 
+ Click on this [link](https://) to access the Mingo app.  
+<h2>How do I use Mingo? </h2>
+
+<h4> To view posts, click on:</h4>
+<ul>
+    <li>Recent Posts to view 10 most recent posts </li>
+    <li>All Posts to view all posts</li>
+    <li>Scroll to the bottom of page and click Next Page to view more posts</li>
+</ul>
+
+<h4>To make a post, complete the following steps: </h4>
+    <ul>
+        <li> Log in using your Google account </li>
+        <li> Click on 'Create Post'</li>  
+        <li> Enter a title for your post.  What subject will you be discussing? </li>  
+        <li> Enter your thoughts in the provided box(250 characters max) </li> 
+        <li> Click 'Submit Post' to publish your post </li> 
+    </ul>
+
+
+<h4> To edit or delete an existing post: </h4> 
+<ul>  
+        <li> Log in using your Google account </li>
+        <li> Click on the title </li>  
+        <li> Click the Edit or Delete button respectively</li>
+        <li> Edit your content </li>
+        <li> Click Update button to save edits</li>
+    </ul>
+<h4>  To view or add comments to an existing post:</h4> 
+<ul>  
+    <li> Log in using your Google account </li>
+    <li> Click on the comments icon</li>  
+    <li> Add your comment</li>
+    <li> Click on Comment button to save </li>
+</ul>
+<h4>  To edit or delete comments to an existing post:</h4> 
+<ul>
+    <li> Click the Edit or Delete button respectively</li>
+    <li> Click Update button to save edits</li>
+</ul>   
 
 ## Technologies Used
 -   Mongoose 
 -   MongoDB
 -   Express
+-   Heroku 
 -   Node 
 -   HTML
 -   CSS
@@ -44,9 +73,14 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 ## Acknowledgements 
 
-## Icebox Features 
-1. Create Google OAuthorization 
-2. View all posts and comments that a user has made. 
-3. Create multi-layer comments on comments. 
+- Comment Icon by <a href="https://www.vecteezy.com/free-vector/abstract">Abstract Vectors by Vecteezy</a>
+- Image logo by <a href="https://www.freepik.com/free-vector/set-pink-flamingos-with-different-poses_2266747.htm#query=flamingo%20icon&position=2&from_view=search&track=ais">Freepik</a>
 
-## Licenses 
+## Icebox Features 
+
+- Cloudinary Support 
+- Categories/Groups pagination
+- Direct messaging between users
+- Filter, Sort, Search functionality
+- Real-time notifications
+

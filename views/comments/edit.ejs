@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <form id="new-comment-form" method="POST" action="/comments/<%= comment._id %>?_method=PUT">
-    <textarea id="body-input" rows="4" cols="50" name="body" placeholder="Enter text here"><%= comment.body %></textarea>
+    <textarea id="body-input" rows="4" cols="50" maxlength="250" name="body" placeholder="Enter text here"><%= comment.body %></textarea>
 <button type="submit">Update</button>
 </form>
 

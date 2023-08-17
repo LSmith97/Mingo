@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<%- include('../partials/posts') %>
+
+<div class="post-container">
+    <div class="title-line">
+        <% if (pageNum > 1) { %>
+        <a href="/posts/pages/<%= pageNum-1 %>">Previous Page</a>
+        <% } %>
+        <p> Current Page: <%= pageNum %></p>
+        <% if (posts.length >= POSTS_PER_PAGE) { %>
+        <a href="/posts/pages/<%= pageNum+1 %>">Next Page</a>
+        <% } %>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
