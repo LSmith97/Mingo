@@ -305,6 +305,10 @@ textarea {
     font-size: 12px;
   }
 
+  .about-container p {  
+ width: 80%;
+  }
+
   header h1 {
     font-size: 30px;
   }
