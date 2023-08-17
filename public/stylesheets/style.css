@@ -303,10 +303,12 @@ textarea {
 
   .about-container {  
     font-size: 12px;
+    
   }
 
-  .about-container p {  
- width: 80%;
+  .about-container * {  
+    width: 80%;
+    overflow-wrap: break-word;
   }
 
   header h1 {
