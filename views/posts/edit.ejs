@@ -2,7 +2,7 @@
 
 <form id="new-post-form" method="POST" action="/posts/<%= post._id%>?_method=PUT">
     <input id="title-input" type="text" name="title" value="<%= post.title %>" required>
-    <textarea id="body-input" rows="4" cols="50" maxlength="250" name="body" required><%= post.body %></textarea>
+    <textarea id="body-input" rows="4" cols="25" maxlength="250" name="body" required><%= post.body %></textarea>
 <button type="submit">Update</button>
 </form>
 
