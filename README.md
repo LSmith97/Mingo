@@ -35,7 +35,7 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
         <li> Log in using your Google account </li>
         <li> Click on 'Create Post'</li>  
         <li> Enter a title for your post.  What subject will you be discussing? </li>  
-        <li> Enter your thoughts in the provided box(250 characters max) </li> 
+        <li> Enter your thoughts in the provided box(500 characters max) </li> 
         <li> Click 'Submit Post' to publish your post </li> 
     </ul>
 
