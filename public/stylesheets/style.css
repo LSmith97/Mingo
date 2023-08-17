@@ -301,6 +301,10 @@ textarea {
     "main" 1fr;
   }
 
+  .about-container {  
+    font-size: 12px;
+  }
+
   header h1 {
     font-size: 30px;
   }
