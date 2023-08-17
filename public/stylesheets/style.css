@@ -244,6 +244,23 @@ textarea {
   height: 40px;
 }
 
+.comment-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid rgb(87, 135, 135);
+  gap: 5px;
+}
+
+.comment-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.comment-icon:hover {
+  filter: invert(80%) drop-shadow(3px 3px rgb(33, 52, 52));
+}
+
 @media screen and (max-width: 500px) { 
   body { 
     grid-template:

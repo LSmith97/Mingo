@@ -12,6 +12,9 @@
              
          </div>
          <p><%= p.body  %></p>
-         <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
+         <div class="comment-line">
+            <a href="/posts/<%=p._id%>"><img class="comment-icon" src="//i.imgur.com/OpBsUpR.png" alt="comment-icon"></a>
+            <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
+         </div>
      </div>
  <%})%>
