@@ -10,15 +10,5 @@
 <section class="comments-container">
     <h2>Posts</h2>
 
-    <% allPosts.forEach(function(p){ %>
-        <div class= 'post-container'>
-             <div class="title-line">
-                <a href="/posts/<%=p._id%>"><h2><%= p.title  %></h2></a>
-                 <p class="edited"><%= p.isEdited ? "edited" : "" %></p>
-             </div>
-             <p><%= p.body  %></p>
-             <a href="/posts/<%=p._id%>"><%=p.comments.length%> Comments</a>
-         </div>
-     <%})%>
-</div>
+<%- include('../partials/posts') %>
 <%- include('../partials/footer') %>

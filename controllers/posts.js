@@ -14,7 +14,7 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const results = await Post.find({}).sort({createdAt: -1}).limit(25)
+        const results = await Post.find({}).sort({createdAt: -1}).limit(5)
         res.render('posts/index', { title: "Recent Posts", posts: results })
     } catch (err) {
         console.log(err);
@@ -96,7 +96,7 @@ async function updatePost(req, res){
 
 async function allPosts(req, res){
     try {
-        const POSTS_PER_PAGE = 5;
+        const POSTS_PER_PAGE = 10;
         const pageNum = Number(req.params.pageNum);
         const results = await Post.find({}).sort({createdAt: -1}).limit(POSTS_PER_PAGE).skip((pageNum-1) * POSTS_PER_PAGE);
         res.render('posts/all', { title: "All Posts", posts: results, pageNum, POSTS_PER_PAGE});
