@@ -20,7 +20,7 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 
 ## Getting Started 
- Click on this [link](https://) to access the Mingo app.  
+ Click on this [link](https://mingo-b8899ae399d9.herokuapp.com/posts) to access the Mingo app.  
 <h2>How do I use Mingo? </h2>
 
 <h4> To view posts, click on:</h4>
