@@ -37,7 +37,7 @@ router.get('/logout', function(req, res){
 
 // About page 
 router.get('/about', function(req,res){
-  res.render('about', {title: 'About'})
+  res.render('about', {title: 'About Mingo'})
 })
 
 module.exports = router;
