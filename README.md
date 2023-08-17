@@ -33,10 +33,10 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 <h4>To make a post, complete the following steps: </h4>
     <ul>
         <li> Log in using your Google account </li>
-        <li> Click on 'Create Post'</li>  
+        <li> Click on the Create Post button above</li>  
         <li> Enter a title for your post.  What subject will you be discussing? </li>  
         <li> Enter your thoughts in the provided box(500 characters max) </li> 
-        <li> Click 'Submit Post' to publish your post </li> 
+        <li> Click the Submit Post button to publish your post </li> 
     </ul>
 
 
