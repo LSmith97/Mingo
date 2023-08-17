@@ -142,6 +142,7 @@ main {
 #new-post-form > button {
   grid-area: button; 
   border-radius: 1rem;
+  border-color: grey;
   background-color:  rgb(52, 105, 81);
   color: aliceblue;
   box-shadow: 3px 3px rgb(33, 52, 52);
@@ -175,6 +176,7 @@ textarea {
 #new-comment-form > button {
   grid-area: button; 
   border-radius: 1rem;
+  border-color: grey;
   background-color:  rgb(52, 105, 81);
   color: aliceblue;
   box-shadow: 3px 3px rgb(33, 52, 52);
@@ -212,11 +214,11 @@ textarea {
   font: 16px "Quicksand", sans-serif; 
   text-decoration: none;
   color: aliceblue;
-  box-shadow: 3px 3px rgb(33, 52, 52);
   padding: 5px; 
   border-style: outset;
   border-width: 2px;
-  border-color: buttonborder;
+  border-color: grey;
+  box-shadow: 3px 3px rgb(33, 52, 52);
 } 
 
 .bottom-row form { 
