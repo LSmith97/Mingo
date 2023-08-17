@@ -12,6 +12,10 @@ Lily Smith:  [GitHub](https://github.com/LSmith97) |  [LinkedIn](https://www.lin
 
 
 ## Screenshot(s)
+<img width="500" alt="image" src="https://github.com/LSmith97/Mingo/assets/85040152/8c8dfcf6-b0cb-4ab8-b0b9-5bc016b86f7c">
+<img width="500" alt="image" src="https://github.com/LSmith97/Mingo/assets/85040152/fb3c65d1-8f66-47bb-b649-ded9dc4ef110">
+<img width="500" alt="image" src="https://github.com/LSmith97/Mingo/assets/85040152/29a982f5-dd69-48e8-9553-a0b84083333e">
+
 
 
 
