@@ -63,19 +63,23 @@
 
 [ERD](https://app.diagrams.net/#G1XqHD4tl-wugBCIuxH7z8KgYK0WxcPcDF)
 ### As a user 
+- I want to be able to sign in using Google OAuth2.
 - I want to be able to see all posts on the index page
-- I  want to be able to delete posts that I have made.
+- I want to be able to delete posts that I have made.
 - I want to be able to make text-based posts.
-- I want to be able to view the details of a post
-- I want to be able to leave comments on posts
-- I want to be able to delete posts
+- I want to be able to view the details of a post.
+- I want to be able to leave comments on posts.
+- I want to be able to delete posts.
 - I want to be able to edit posts and demonstrate that it's been edited.
+- I want to be able to view all comments and posts that another user has made.
 
 ## Optional - Icebox Features 
 ### As a user 
-- I want to be able to sign in using Google OAuth2
-- I want to be able to view all comments and posts that another user has made.
-- I want to leave comments on comments
+- As a user, I want to upload images and audio.
+- As a user, I want to view categories and groups of posts.
+- As a user. I want to message other users directly.
+- As a user, I want to filter, search, and sort posts.
+- As a user, I want to see real time notifications.
 
 ## Wireframe Screenshots
 
